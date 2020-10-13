@@ -6,9 +6,7 @@ import datetime
 
 class TestDateTime(unittest.TestCase):
     def test_half_birthday(self):
-        b_day = datetime.date(2020, 4, 29)
-        half_b_day = b_day + timedelta(days=182.5)
-        self.assertEqual(half_birthday(b_day), half_b_day)
+        self.assertEqual(half_birthday(2020, 4, 29), datetime.date(2020, 10, 28))
 
 
 if __name__ == '__main__':

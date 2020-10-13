@@ -8,9 +8,18 @@ from datetime import timedelta
 import datetime
 
 
-def half_birthday(date_time):
-    pass
+def half_birthday(year, month, day):
+    """
+    This function converts a birthday into a future half birthday by
+    adding 182.5 days to whatever date is included in the parameters
+    :param year:
+    :param month:
+    :param day:
+    :return: Your birthday + half a year (182.5 days)
+    """
+    b_day = datetime.date(year, month, day)
+    return b_day + timedelta(days=182.5)
 
 
 if __name__ == '__main__':
-    half_birthday(0)
+    print(('=' * 40), "\nYour Half Birthday is... ", half_birthday(2020, 4, 29))
